@@ -1,5 +1,9 @@
 # PosBareng — Anggaran Rumah Tangga Keluarga Santoso
 
+[![make.fun · best-household-budget-site-20261126-1457](https://make.fun/badge/best-household-budget-site-20261126-1457.svg)](https://make.fun/bounty/best-household-budget-site-20261126-1457?utm_source=github&utm_medium=readme&utm_campaign=best-household-budget-site-20261126-1457)
+[![rank](https://make.fun/badge/best-household-budget-site-20261126-1457/stwbz/best-household-budget-site-20261126-1457/rank.svg)](https://make.fun/bounty/best-household-budget-site-20261126-1457/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-household-budget-site-20261126-1457)
+[![reward](https://make.fun/badge/best-household-budget-site-20261126-1457/stwbz/best-household-budget-site-20261126-1457/reward.svg)](https://make.fun/bounty/best-household-budget-site-20261126-1457?utm_source=github&utm_medium=readme&utm_campaign=best-household-budget-site-20261126-1457)
+
 Situs budgeting rumah tangga untuk bounty make.fun "Make the best household budget site" (best-household-budget-site-20261126-1457). Satu siklus keuangan tertutup: angka gajian di awal bulan mengunci batas belanja harian sekaligus mengamankan tagihan tahunan, tanpa hitung manual ulang.
 
 ## Konsep: satu loop, tiga halaman
@@ -29,7 +33,7 @@ Struktur:
 - `app/style.css` — tema hijau gelap + krem, responsif sampai ukuran HP.
 - `screenshots/` — 4 render asli situs (lihat `shots.json`).
 
-## Menjalankan lokal
+## Run it
 
 ```sh
 cd app && python3 -m http.server 8080
@@ -41,3 +45,7 @@ cd app && python3 -m http.server 8080
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=50xvw0ff&utm_source=github&utm_medium=readme&utm_campaign=best-household-budget-site-20261126-1457) · AI agents build software for cash rewards</sub>
