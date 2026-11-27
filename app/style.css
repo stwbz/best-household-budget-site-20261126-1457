@@ -1,0 +1,523 @@
+/* PosBareng — hijau gelap + krem + aksen amber, Plus Jakarta Sans.
+   Font di-vendor sebagai file di app/fonts/ — tanpa font luar, tanpa
+   gambar luar: semua warna dan bentuk dari CSS ini. */
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/plus-jakarta-sans-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/plus-jakarta-sans-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/plus-jakarta-sans-800.woff2") format("woff2");
+}
+
+:root {
+  --green-900: #143d22;
+  --green-700: #1d4d2b;
+  --green-500: #2f7a45;
+  --green-300: #7fb069;
+  --green-100: #e4efe0;
+  --cream: #faf6ec;
+  --paper: #fffdf6;
+  --ink: #22301f;
+  --muted: #6b7263;
+  --line: #e3ddc9;
+  --amber: #d9a441;
+  --gold: #f0c35c;
+  --red: #b3372f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-weight: 800;
+  color: var(--green-900);
+  margin: 0 0 8px;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 20px; }
+h2.sub { margin-top: 24px; }
+h3 { font-size: 16px; }
+
+p { margin: 0 0 12px; }
+a { color: var(--green-500); }
+.muted { color: var(--muted); font-size: 13px; }
+
+/* ---- header ---- */
+header {
+  background: var(--green-900);
+  color: #f3efe2;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+}
+
+.brand {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #f3efe2;
+  text-decoration: none;
+}
+
+.brand small {
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #cfe3c8;
+  margin-left: 8px;
+}
+
+.nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-left: auto; }
+.nav a {
+  color: #cfe3c8;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.nav a.active { color: #fff; border-bottom-color: var(--amber); font-weight: bold; }
+.month-badge {
+  font-size: 12px;
+  background: #2a5a38;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #e8f0df;
+}
+
+main { max-width: 1080px; margin: 0 auto; padding: 20px; }
+footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 20px 28px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---- hero ---- */
+.hero {
+  background: var(--green-700);
+  color: #f7f3e6;
+  border-radius: 14px;
+  padding: 24px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.hero h1 { color: #fff; font-size: 34px; margin: 6px 0 8px; }
+.hero-label { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #bcd8b2; margin: 10px 0 2px; }
+.hero-amount {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  margin: 2px 0 10px;
+}
+.hero-shorthand { color: #e8f0df; font-size: 14px; margin: 0 0 6px; }
+.hero-side { text-align: right; min-width: 200px; }
+.hero-side-label { display: block; font-size: 12px; color: #bcd8b2; text-transform: uppercase; letter-spacing: 1px; }
+.hero-side strong { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #fff; font-variant-numeric: tabular-nums; }
+.hero-side-sub { display: block; font-size: 13px; color: #c4d6ba; }
+
+/* Rumus lengkap di balik ikon info — kartu hero tetap bersih. */
+.formula { display: inline; }
+.formula summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #bcd8b2;
+  font-size: 12px;
+  list-style: none;
+}
+.formula summary::-webkit-details-marker { display: none; }
+.info-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid #bcd8b2;
+  color: #bcd8b2;
+  font-size: 11px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1;
+}
+.formula-full { font-size: 13px; color: #d8e6cf; margin: 8px 0 0; }
+
+/* ---- kartu statistik ---- */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+.stat {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.stat-label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.stat-value { display: block; font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.5px; color: var(--green-900); margin: 4px 0; font-variant-numeric: tabular-nums; }
+.stat-sub { font-size: 12px; color: var(--muted); }
+/* Flag rata-rata belanja di atas Batas Aman: merah, tebal, langsung terbaca. */
+.stat-flag { color: var(--red); font-weight: 700; }
+/* Judul tabel + badge jumlah: badge berdiri sendiri dengan space yang
+   jelas, bukan teks yang menempel di judul (koreksi ronde 4). */
+.table-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.table-head h2 { margin: 0; }
+.count-badge {
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--green-100);
+  color: var(--green-700);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+/* Footer tabel: info rentang + pagination yang beneran jalan. */
+.pager { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+.pager-info { font-size: 13px; color: var(--muted); }
+.pager-btns { display: flex; gap: 6px; }
+.pager-btns button { background: #fff; color: var(--green-700); border: 1px solid var(--line); padding: 6px 11px; font-size: 13px; min-width: 34px; }
+.pager-btns button.current { background: var(--green-700); color: #fff; border-color: var(--green-700); }
+.pager-btns button:disabled { opacity: 0.4; cursor: default; }
+.pager-btns button:hover:not(:disabled):not(.current) { background: var(--green-100); }
+
+/* ---- kartu dan grid ---- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-2 .card { margin-bottom: 0; }
+.grid-2 { margin-bottom: 16px; }
+
+.page-head { margin: 8px 0 20px; }
+.page-head h1 { font-size: 30px; }
+.page-head p { max-width: 720px; color: #3d4a38; }
+
+/* ---- donat & legenda ---- */
+.donut-wrap { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.donut-total { font-family: "Plus Jakarta Sans", system-ui, sans-serif; font-weight: 800; font-size: 20px; fill: var(--green-900); }
+.donut-label { font-size: 11px; fill: var(--muted); }
+.legend { list-style: none; margin: 0; padding: 0; flex: 1; min-width: 220px; }
+.legend li { display: flex; gap: 8px; align-items: baseline; padding: 3px 0; font-size: 13px; }
+.legend li b { margin-left: auto; }
+.legend li i { font-style: normal; color: var(--muted); width: 34px; text-align: right; }
+.dot { width: 10px; height: 10px; border-radius: 50%; flex: none; align-self: center; }
+
+/* ---- bar ---- */
+.bar { height: 10px; background: #ece7d3; border-radius: 6px; overflow: hidden; flex: 1; }
+.bar-fill { height: 100%; border-radius: 6px; }
+.bar-fill.ok { background: var(--green-500); }
+.bar-fill.warn { background: var(--amber); }
+.bar-fill.over { background: var(--red); }
+.bar-pct { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.meter { margin-bottom: 14px; }
+.meter span { display: block; font-size: 13px; margin-bottom: 6px; }
+.meter .bar-pct { display: inline-block; margin-top: 4px; }
+
+/* Rasio anggota: pill harus muat penuh (dulu ada aturan span 52px yang
+   memotong nama keluar dari background), gap pill–bar jelas, bar lebih
+   pendek supaya ada ruang napas. */
+.member-row { display: flex; gap: 16px; align-items: center; margin: 8px 0; font-size: 13px; }
+.member-row .pill { min-width: 92px; justify-content: center; padding: 3px 12px; }
+.member-row .bar { max-width: 200px; }
+.member-row b { width: 110px; text-align: right; }
+.member-row i { font-style: normal; color: var(--muted); width: 34px; text-align: right; }
+
+/* ---- tagihan ---- */
+.bills { list-style: none; margin: 0; padding: 0; }
+.bill {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.bill:last-child { border-bottom: none; }
+.bill label { display: flex; gap: 6px; align-items: center; cursor: pointer; min-width: 118px; }
+.bill-check { font-size: 12px; color: var(--green-500); }
+.bill.due .bill-check { color: var(--red); }
+.bill-name { flex: 1; }
+.bill-due { color: var(--muted); font-size: 12px; }
+.bill b { white-space: nowrap; }
+
+/* ---- tren ---- */
+.trend { display: flex; gap: 10px; align-items: flex-end; height: 150px; padding-top: 8px; }
+.trend-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+.trend-pair { display: flex; gap: 4px; align-items: flex-end; height: 120px; }
+.trend-bar { width: 18px; border-radius: 3px 3px 0 0; }
+.trend-bar.in { background: #bcd8b2; }
+.trend-bar.out { background: var(--green-700); }
+.trend-col span { font-size: 12px; color: var(--muted); }
+.trend-note { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+/* ---- sinking funds ---- */
+.radar { list-style: none; margin: 0; padding: 0; }
+.radar li { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.radar li:last-child { border-bottom: none; }
+.radar li span { display: block; margin-bottom: 4px; }
+.radar li b { display: block; margin-bottom: 6px; }
+.funds { display: grid; gap: 12px; }
+.fund { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--cream); }
+.fund strong { display: block; font-size: 16px; margin: 4px 0 8px; }
+.fund-meta { display: block; font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+/* ---- rapat gaji ---- */
+/* Baris kontributor pemasukan: pilih anggota dulu (selektor ber-style pill,
+   di atas), baru nominal di bawahnya. Label selalu di atas kotaknya. */
+.contrib-list { display: grid; gap: 10px; }
+.contrib-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--cream);
+}
+.contrib-row label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.contrib-remove {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  align-self: start;
+  background: none;
+  color: var(--red);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  font-size: 16px;
+  line-height: 1;
+}
+.contrib-add {
+  background: #fff;
+  color: var(--green-700);
+  border: 1px dashed var(--green-300);
+  padding: 8px 14px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.contrib-add:disabled { opacity: 0.45; cursor: default; }
+/* Selektor anggota = select ber-style pill: warna pill anggota yang sama
+   dengan tag di tabel/rasio, plus chevron kecil supaya jelas bisa diklik. */
+.contrib-select { padding: 2px 7px 2px 9px; gap: 4px; }
+.contrib-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 0;
+  cursor: pointer;
+  max-width: 100%;
+}
+.contrib-select select:focus { outline: none; }
+.contrib-select:focus-within { outline: 2px solid var(--green-300); outline-offset: 1px; }
+.contrib-select svg { width: 10px; height: 10px; flex: none; }
+.income-total { font-size: 15px; margin-top: 12px; }
+.slider-row { display: grid; grid-template-columns: 170px 1fr 190px; gap: 12px; align-items: center; padding: 8px 0; }
+.slider-row label { font-size: 14px; }
+.slider-val { font-size: 13px; text-align: right; }
+.slider-val b { color: var(--green-900); }
+
+/* ---- slider alokasi: hijau brand, bukan biru default browser ---- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  background: var(--green-100);
+  border: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green-700);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(20, 61, 34, 0.4);
+  cursor: grab;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--green-700);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(20, 61, 34, 0.4);
+  cursor: grab;
+}
+input[type="range"]::-moz-range-track { height: 8px; border-radius: 6px; background: var(--green-100); }
+input[type="range"]:focus-visible { outline: 2px solid var(--green-300); outline-offset: 2px; }
+
+/* ---- pill badge anggota & kategori ---- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.pill svg { width: 12px; height: 12px; flex: none; }
+.pill-suami { background: #e4efe0; color: #1d4d2b; }
+.pill-istri { background: #f7e8c8; color: #7a5a12; }
+.pill-anak { background: #f0e3d3; color: #6d4a2f; }
+.pill-rumah { background: #e6e8e0; color: #4a5546; }
+.pill-cat { background: var(--cream); color: var(--ink); border: 1px solid var(--line); font-weight: 600; }
+.pill-cat .dot { width: 8px; height: 8px; }
+
+/* ---- form & tabel ---- */
+form { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: flex-end; }
+form label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); flex: 1; min-width: 140px; }
+input, select, button {
+  font: inherit;
+  padding: 9px 10px;
+  border: 1px solid #cfc8ae;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+input:focus, select:focus { outline: 2px solid var(--green-300); }
+button {
+  background: var(--amber);
+  color: var(--green-900);
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  font-weight: 700;
+}
+button:hover { background: #c78f2e; }
+#qa-cancel { background: #fff; color: var(--ink); border: 1px solid #cfc8ae; }
+.domino {
+  background: var(--green-100);
+  border-left: 4px solid var(--green-500);
+  padding: 10px 12px;
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  margin: 14px 0 0;
+}
+
+.filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.filters label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+td.num { text-align: right; font-weight: bold; }
+th.num { text-align: right; }
+td.actions button {
+  background: none;
+  color: var(--green-500);
+  padding: 2px 6px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+td.actions button:last-child { color: var(--red); }
+.tag-bill { font-size: 11px; background: var(--green-100); color: var(--green-700); border-radius: 10px; padding: 1px 7px; }
+.table-foot { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+
+/* Label Kategori di form cukup lebar supaya teksnya tidak terpotong.
+   Lebarnya milik LABEL, bukan select-nya — min-width di select bikin
+   select meluber keluar label dan menempel ke field sebelah (koreksi
+   ronde 3: Kategori dan Tag pelaku kelihatan gabung jadi satu field). */
+#quick-add label.qa-wide { flex: 2; min-width: 210px; }
+#qa-category { min-width: 0; }
+
+/* ---- bottom tab bar (HP saja) ---- */
+.tabbar { display: none; }
+
+/* ---- responsif ---- */
+@media (max-width: 760px) {
+  h1 { font-size: 24px; }
+  .hero h1 { font-size: 26px; }
+  .hero-amount { font-size: 44px; }
+  .hero { padding: 18px; }
+  .hero-side { text-align: left; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat-value { font-size: 20px; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .slider-row { grid-template-columns: 1fr; gap: 2px; }
+  .slider-val { text-align: left; }
+  main { padding: 14px; }
+  /* Header HP ramping: tanpa tagline, tanpa nav atas, tanpa badge bulan. */
+  .brand small { display: none; }
+  .nav { display: none; }
+  .month-badge { display: none; }
+  header { padding: 12px 16px; }
+  /* Navigasi pindah ke bawah, tetap di layar, mudah dijangkau jempol. */
+  .tabbar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: var(--green-900);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+    justify-content: space-around;
+    box-shadow: 0 -2px 12px rgba(20, 61, 34, 0.25);
+  }
+  .tabbar a {
+    color: #cfe3c8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 6px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+  }
+  .tabbar a.active { color: #fff; background: #2a5a38; }
+  body { padding-bottom: 62px; }
+  footer { padding-bottom: 20px; }
+}
